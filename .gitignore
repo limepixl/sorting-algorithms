@@ -11,3 +11,12 @@
 *.vcxproj
 *.user
 *.filters
+*.obj
+*.tlog
+*.pdb
+*.idb
+*.log
+*.ilk
+*.exe
+
+**/Debug
