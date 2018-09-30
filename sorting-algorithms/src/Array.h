@@ -13,6 +13,8 @@ public:
 
 	void Draw(class sf::RenderWindow* window);
 
+	void Shuffle(Array &array);
+
 	std::vector<sf::RectangleShape> getArray();
 
 private:
