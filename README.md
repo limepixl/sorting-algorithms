@@ -8,4 +8,4 @@ This project is a sort of 'intro to SFML' for me, so the code is messy, ineffici
 If anyone wants to contribute by fixing any mistakes or improving upon anything in this project, feel free to open a pull request! :)
 
 
-![Bubble Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/GIF.gif)
+![Bubble Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/bubblesort.gif)
