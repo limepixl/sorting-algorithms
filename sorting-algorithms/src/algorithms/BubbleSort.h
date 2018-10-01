@@ -7,5 +7,5 @@ private:
 	BubbleSort() {};
 
 public:
-	static bool runSort(std::vector<sf::RectangleShape> arr, sf::RenderWindow* window);
+	static bool runSort(std::vector<sf::RectangleShape> arr, sf::RenderWindow* window, int delay);
 };
