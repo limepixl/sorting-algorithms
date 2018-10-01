@@ -20,3 +20,4 @@
 *.exe
 
 **/Debug
+**/Release
