@@ -18,7 +18,6 @@ int main() {
 	// Ask the user for the desired number of bars
 	std::cout << "Enter the number of items that need to be sorted.\n(For the most aesthetically pleasing effect use the same number as the height of the window.)\n";
 	std::cin >> n;
-	// TODO : Currently, the bars' height is determined also by the number of bars. Fix this behaviour.
 
 	// Ask the user for the desired delay between comparisons
 	std::cout << "Enter the desired delay between comparisons. (in milliseconds) :\n";
