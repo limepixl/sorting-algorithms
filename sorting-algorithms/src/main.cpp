@@ -16,7 +16,7 @@ int main() {
 	std::cin >> windowHeight;
 
 	// Ask the user for the desired number of bars
-	std::cout << "Enter the number of items that need to be sorted.\n(For the most aesthetically pleasing effect use the same number as the height of the window.)\n";
+	std::cout << "Enter the number of items that need to be sorted.\n";
 	std::cin >> n;
 
 	// Ask the user for the desired delay between comparisons

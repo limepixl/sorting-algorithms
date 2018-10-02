@@ -12,8 +12,8 @@ Array::Array(int windowWidth, int windowHeight, std::vector<sf::RectangleShape> 
 	this->height = windowHeight;
 
 	for (int i = 0; i < n; i++) {
-		
 		sf::RectangleShape bar(sf::Vector2f((float)width / n, ((float)height / n) * array.at(i).value));
+		bar.setFillColor(sf::Color(200, 200, 200, 255));
 		bar.setOrigin(sf::Vector2f(0.0f, ((float)height / n) * array.at(i).value));
 		bar.setPosition(sf::Vector2f(i + ((float)width / n - 1) * i, height));
 		bar.value = array.at(i).value;
@@ -25,6 +25,7 @@ Array::Array(int windowWidth, int windowHeight, std::vector<sf::RectangleShape> 
 void Array::GenerateArray() {
 	for (int i = 1; i <= n; i++) {
 		sf::RectangleShape bar(sf::Vector2f((float)width / n, ((float)height/n) * i));
+		bar.setFillColor(sf::Color(200, 200, 200, 255));
 		bar.setOrigin(sf::Vector2f(0.0f, ((float)height / n) * i));
 		bar.setPosition(sf::Vector2f(i + ((float)width / n - 1) * i, height));
 		bar.value = i;
