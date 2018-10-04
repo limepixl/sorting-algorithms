@@ -6,25 +6,25 @@ Array::Array(int windowWidth, int windowHeight, int numOfElements) {
 	this->n = numOfElements;
 }
 
-Array::Array(int windowWidth, int windowHeight, std::vector<sf::RectangleShape> array) {
+Array::Array(int windowWidth, int windowHeight, std::vector<RectangleShape> array) {
 	this->n = array.size();
 	this->width = windowWidth;
 	this->height = windowHeight;
 
 	for (int i = 0; i < n; i++) {
-		sf::RectangleShape bar(sf::Vector2f((float)width / n, ((float)height / n) * array.at(i).value));
+		RectangleShape bar(sf::Vector2f((float)width / n, ((float)height / n) * array.at(i).value));
 		bar.setFillColor(sf::Color(200, 200, 200, 255));
 		bar.setOrigin(sf::Vector2f(0.0f, ((float)height / n) * array.at(i).value));
 		bar.setPosition(sf::Vector2f(i + ((float)width / n - 1) * i, height));
 		bar.value = array.at(i).value;
-		
+
 		arr.push_back(bar);
 	}
 }
 
 void Array::GenerateArray() {
 	for (int i = 1; i <= n; i++) {
-		sf::RectangleShape bar(sf::Vector2f((float)width / n, ((float)height/n) * i));
+		RectangleShape bar(sf::Vector2f((float)width / n, ((float)height/n) * i));
 		bar.setFillColor(sf::Color(200, 200, 200, 255));
 		bar.setOrigin(sf::Vector2f(0.0f, ((float)height / n) * i));
 		bar.setPosition(sf::Vector2f(i + ((float)width / n - 1) * i, height));
@@ -45,7 +45,7 @@ void Array::Draw(sf::RenderWindow* window) {
 }
 
 void Array::Shuffle(Array& array) {
-	std::vector<sf::RectangleShape> arrayOfRects = array.getArray();
+	std::vector<RectangleShape> arrayOfRects = array.getArray();
 	int size = arrayOfRects.size();
 
 	for (int i = 0; i < size; i++) {
@@ -56,6 +56,6 @@ void Array::Shuffle(Array& array) {
 	array = Array(width, height, arrayOfRects);
 }
 
-std::vector<class sf::RectangleShape> Array::getArray() {
+std::vector<class RectangleShape> Array::getArray() {
 	return this->arr;
 }

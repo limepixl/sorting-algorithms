@@ -1,13 +1,14 @@
 #pragma once
 
-// Forward declare...
 #include <SFML/Graphics.hpp>
 #include <vector>
+
+#include "RectangleShape.h"
 class Array {
 public:
 	Array(int windowWidth, int windowHeight, int numOfElements);
 
-	Array(int windowWidth, int windowHeight, std::vector<sf::RectangleShape> array);
+	Array(int windowWidth, int windowHeight, std::vector<RectangleShape> array);
 
 	void GenerateArray();
 
@@ -15,10 +16,10 @@ public:
 
 	void Shuffle(Array &array);
 
-	std::vector<sf::RectangleShape> getArray();
+	std::vector<RectangleShape> getArray();
 
 private:
 	int width, height, n;
 
-	std::vector<sf::RectangleShape> arr;
+	std::vector<RectangleShape> arr;
 };

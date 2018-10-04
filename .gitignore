@@ -1,6 +1,4 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# Visual Studio
 
 *.suo
 *.db
@@ -21,3 +19,12 @@
 
 **/Debug
 **/Release
+
+# Code Blocks
+
+*.cbp
+/sorting-algorithms.layout
+/sorting-algorithms.depend
+
+**/bin
+**/obj

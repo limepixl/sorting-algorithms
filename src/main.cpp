@@ -3,12 +3,13 @@
 #include <iostream>
 #include "Array.h"
 #include "algorithms/BubbleSort.h"
+#include "RectangleShape.h"
 
 int main() {
 	int n, windowWidth, windowHeight;
 	bool sorted = false;
 	int milliseconds;
-	
+
 	// Ask the user for the window's desired dimensions
 	std::cout << "Enter the dimensions of the window.\nWidth: ";
 	std::cin >> windowWidth;

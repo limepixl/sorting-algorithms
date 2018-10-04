@@ -3,7 +3,7 @@
 #include <thread>
 #include <chrono>
 
-bool BubbleSort::runSort(std::vector<sf::RectangleShape> arr, sf::RenderWindow* window, int delay) {
+bool BubbleSort::runSort(std::vector<RectangleShape> arr, sf::RenderWindow* window, int delay) {
 	int n = arr.size();
 
 	for (int i = 0; i < n - 1; i++) {
