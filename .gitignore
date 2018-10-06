@@ -22,9 +22,9 @@
 
 # Code Blocks
 
-*.cbp
-/sorting-algorithms.layout
-/sorting-algorithms.depend
+#*.cbp
+#/sorting-algorithms.layout
+#/sorting-algorithms.depend
 
 **/bin
 **/obj
