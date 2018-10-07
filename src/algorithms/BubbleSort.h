@@ -1,13 +1,11 @@
 #pragma once
-
 #include <SFML/Graphics.hpp>
-#include <vector>
 
-#include "../RectangleShape.h"
 class BubbleSort {
 private:
-	BubbleSort() {};
+    BubbleSort() {};
 
 public:
-	static bool runSort(std::vector<RectangleShape> arr, sf::RenderWindow* window, int delay);
+    // Run the bubble sort
+    static void runSort(std::vector<class RectangleShape> arrayOfRects, sf::RenderWindow* window, int delay);
 };

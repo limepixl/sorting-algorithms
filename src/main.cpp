@@ -1,14 +1,16 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <iostream>
-#include "Array.h"
-#include "algorithms/BubbleSort.h"
 #include "RectangleShape.h"
+#include "Utils.h"
+#include "algorithms/BubbleSort.h"
+
+// Macro to clear the terminal.
+#define CLEAR() { std::cout << "\033[2J\033[1;1H"; };
 
 int main() {
-	int n, windowWidth, windowHeight;
+	int n, windowWidth, windowHeight, delay;
 	bool sorted = false;
-	int milliseconds;
 
 	// Ask the user for the window's desired dimensions
 	std::cout << "Enter the dimensions of the window.\nWidth: ";
@@ -16,21 +18,25 @@ int main() {
 	std::cout << "Height: ";
 	std::cin >> windowHeight;
 
+    CLEAR();
+
 	// Ask the user for the desired number of bars
 	std::cout << "Enter the number of items that need to be sorted.\n";
 	std::cin >> n;
 
+	CLEAR();
+
 	// Ask the user for the desired delay between comparisons
-	std::cout << "Enter the desired delay between comparisons. (in milliseconds) :\n";
-	std::cin >> milliseconds;
+	std::cout << "Enter the desired delay between comparisons and draw calls, in milliseconds.\n";
+	std::cin >> delay;
+
+	CLEAR();
 
 	// Create window
-	sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Title");
+	sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Sorting");
 
-	// Generate a random array of bars
-	Array arr(windowWidth, windowHeight, n);
-	arr.GenerateArray();
-	arr.Shuffle(arr);
+	std::vector<RectangleShape> bars = Utils::genArray(n, &window);
+	bars = Utils::shuffleArray(bars);
 
 	// Render loop
 	while (window.isOpen()) {
@@ -41,12 +47,12 @@ int main() {
 			}
 		}
 
-		if (!sorted) {
-			if (BubbleSort::runSort(arr.getArray(), &window, milliseconds)) {
-				sorted = true;
-				std::cout << "Finished sort!\n";
-			}
-		}
+        if(!sorted) {
+            BubbleSort::runSort(bars, &window, delay);
+            sorted = true;
+        }
+
+        window.display();
 	}
 	return 0;
 }
