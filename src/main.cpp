@@ -49,7 +49,7 @@ int main() {
 		}
 
         if(!sorted) {
-            InsertionSort::runSort(shuffled, &window, delay);
+            BubbleSort::runSort(shuffled, &window, delay);
             sorted = true;
         } else {
             window.clear(sf::Color(51,51,51,255));
