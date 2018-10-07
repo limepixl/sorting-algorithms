@@ -9,8 +9,13 @@ If anyone wants to contribute by fixing any mistakes or improving upon anything 
 
 Inspired by [this amazing project!](https://github.com/bingmann/sound-of-sorting) 
 
-## Bubble sort
-![Slow Bubble Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/slow-bubblesort.gif)
+## Bubble sort 
+![Fast Bubble Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/fastbubble.gif)
 
+![Slow Bubble Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/slowbubble.gif)
 
-![Bubble Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/bubblesort.gif)
+## Insertion sort
+![Fast Insertion Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/fastinsertion.gif)
+
+![Slow Insertion Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/slowinsertion.gif)
+
