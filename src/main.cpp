@@ -4,6 +4,7 @@
 #include "RectangleShape.h"
 #include "Utils.h"
 #include "algorithms/BubbleSort.h"
+#include "algorithms/InsertionSort.h"
 
 // Macro to clear the terminal.
 #define CLEAR() { std::cout << "\033[2J\033[1;1H"; };
@@ -36,7 +37,7 @@ int main() {
 	sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Sorting");
 
 	std::vector<RectangleShape> bars = Utils::genArray(n, &window);
-	bars = Utils::shuffleArray(bars);
+	std::vector<RectangleShape> shuffled = Utils::shuffleArray(bars);
 
 	// Render loop
 	while (window.isOpen()) {
@@ -48,8 +49,14 @@ int main() {
 		}
 
         if(!sorted) {
-            BubbleSort::runSort(bars, &window, delay);
+            InsertionSort::runSort(shuffled, &window, delay);
             sorted = true;
+        } else {
+            window.clear(sf::Color(51,51,51,255));
+            for(int i = 0; i < n; i++) {
+                window.draw(bars.at(i));
+            }
+            window.display();
         }
 
         window.display();

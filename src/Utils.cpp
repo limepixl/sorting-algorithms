@@ -18,7 +18,7 @@ std::vector<RectangleShape> Utils::genArray(int n, sf::RenderWindow* window) {
         // and set their position according to the width and height of the window
         rect.setFillColor(sf::Color(200,200,200,255));
         rect.setOrigin(sf::Vector2f(0.0f, (height/n) * i));
-        rect.setPosition(sf::Vector2f(i + (width / n - 1) * i, height));
+        rect.setPosition(sf::Vector2f(i + ((width / n) - 1) * (i-1), height));
 
         // Set the value for each rectangle (this actually gets sorted).
         rect.value = i;
