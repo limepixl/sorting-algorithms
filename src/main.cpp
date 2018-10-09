@@ -6,9 +6,6 @@
 #include "algorithms/BubbleSort.h"
 #include "algorithms/InsertionSort.h"
 
-// Macro to clear the terminal.
-#define CLEAR() { std::cout << "\033[2J\033[1;1H"; };
-
 int main() {
 	int n, windowWidth, windowHeight, delay;
 	bool sorted = false;
@@ -19,19 +16,13 @@ int main() {
 	std::cout << "Height: ";
 	std::cin >> windowHeight;
 
-    CLEAR();
-
 	// Ask the user for the desired number of bars
 	std::cout << "Enter the number of items that need to be sorted.\n";
 	std::cin >> n;
 
-	CLEAR();
-
 	// Ask the user for the desired delay between comparisons
 	std::cout << "Enter the desired delay between comparisons and draw calls, in milliseconds.\n";
 	std::cin >> delay;
-
-	CLEAR();
 
 	// Create window
 	sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Sorting");
