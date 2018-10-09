@@ -39,18 +39,17 @@ int main() {
 			}
 		}
 
-        if(!sorted) {
-            BubbleSort::runSort(shuffled, &window, delay);
-            sorted = true;
-        } else {
-            window.clear(sf::Color(51,51,51,255));
-            for(int i = 0; i < n; i++) {
-                window.draw(bars.at(i));
-            }
-            window.display();
-        }
-
-        window.display();
+		if (!sorted) {
+			BubbleSort::runSort(shuffled, &window, delay);
+			sorted = true;
+		}
+		else {
+			window.clear(sf::Color(51, 51, 51, 255));
+			for (int i = 0; i < n; i++) {
+				window.draw(bars.at(i));
+			}
+			window.display();
+		}
 	}
 	return 0;
 }
