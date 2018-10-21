@@ -29,3 +29,4 @@
 **/bin
 **/obj
 *.out
+Makefile
