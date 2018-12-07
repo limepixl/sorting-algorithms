@@ -3,8 +3,7 @@
 #include <iostream>
 #include "RectangleShape.h"
 #include "Utils.h"
-#include "algorithms/BubbleSort.h"
-#include "algorithms/InsertionSort.h"
+#include "Algorithms.h"
 
 // All sorting algorithms stored in an enum
 enum SortType {
@@ -39,7 +38,7 @@ int main() {
 	sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Sorting");
 
 	std::vector<RectangleShape> bars = Utils::genArray(n, &window);
-	std::vector<RectangleShape> shuffled = Utils::shuffleArray(bars);
+	Utils::shuffleArray(bars);
 
 	// Render loop
 	while (window.isOpen()) {
@@ -53,12 +52,12 @@ int main() {
 		if (!sorted) {
 			switch (sortType) {
 			case BUBBLE_SORT:
-				BubbleSort::runSort(shuffled, &window, delay);
+				BubbleSort::runSort(bars, &window, delay);
 				sorted = true;
 				break;
 
 			case INSERTION_SORT:
-				InsertionSort::runSort(shuffled, &window, delay);
+				InsertionSort::runSort(bars, &window, delay);
 				sorted = true;
 				break;
 
@@ -70,7 +69,7 @@ int main() {
 		else {
 			window.clear(sf::Color(51, 51, 51, 255));
 			for (int i = 0; i < n; i++) {
-				window.draw(bars.at(i));
+				window.draw(bars[i]);
 			}
 			window.display();
 		}

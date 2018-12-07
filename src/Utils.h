@@ -1,15 +1,10 @@
 #pragma once
+#include "RectangleShape.h"
 #include <SFML/Graphics.hpp>
 #include <vector>
+ 
+namespace Utils {
+	std::vector<RectangleShape> genArray(int n, sf::RenderWindow* window);
 
-// Utility class
-class Utils {
-private:
-    Utils() {};
-public:
-    // Generate an already sorted array of RectangleShapes
-    static std::vector<class RectangleShape> genArray(int numOfElements, sf::RenderWindow* window);
-
-    // Shuffle an existing array of RectangleShapes
-    static std::vector<class RectangleShape> shuffleArray(std::vector<class RectangleShape> arr);
-};
+	void shuffleArray(std::vector<RectangleShape>& arr);
+}
