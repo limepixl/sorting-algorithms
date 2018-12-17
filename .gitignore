@@ -31,3 +31,5 @@
 *.out
 Makefile
 *.json
+
+.vs
