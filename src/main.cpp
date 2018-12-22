@@ -8,7 +8,8 @@
 // All sorting algorithms stored in an enum
 enum SortType {
 	BUBBLE_SORT,
-	INSERTION_SORT
+	INSERTION_SORT,
+	SELECTION_SORT
 };
 
 int main() {
@@ -31,7 +32,7 @@ int main() {
 
 	// Ask the user for which algorithm to use
 	std::cout << "Enter the algorithm you would like to use.\n";
-	std::cout << "(BubbleSort = 0 | InsertionSort = 1)\n";
+	std::cout << "(BubbleSort = 0 | InsertionSort = 1 | SelectionSort = 2)\n";
 	std::cin >> sortType;
 
 	// Create window
@@ -58,6 +59,11 @@ int main() {
 
 			case INSERTION_SORT:
 				InsertionSort::runSort(bars, &window, delay);
+				sorted = true;
+				break;
+
+			case SELECTION_SORT:
+				SelectionSort::runSort(bars, &window, delay);
 				sorted = true;
 				break;
 
