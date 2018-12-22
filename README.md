@@ -19,3 +19,8 @@ Inspired by [this amazing project!](https://github.com/bingmann/sound-of-sorting
 
 ![Slow Insertion Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/slow-insertionsort.gif)
 
+## Selection sort
+![Fast Selection Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/fast-selectionsort.gif)
+
+![Slow Selection Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/slow-selectionsort.gif)
+
