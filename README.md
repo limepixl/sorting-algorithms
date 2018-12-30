@@ -9,7 +9,7 @@ If anyone wants to contribute by fixing any mistakes or improving upon anything 
 
 Inspired by [this amazing project!](https://github.com/bingmann/sound-of-sorting) 
 
-**Note: The same delay in milliseconds was used between all the implementations. (200ms for the slow gifs and 0ms for the fast gifs)**
+**Note: All fast gifs are sped up by the same amount. The same goes for the slow gifs.**
 
 ## Bubble sort 
 ![Fast Bubble Sort](https://raw.githubusercontent.com/limepixl/sorting-algorithms/master/gifs/fast-bubblesort.gif)
