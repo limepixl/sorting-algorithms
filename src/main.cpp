@@ -37,6 +37,7 @@ int main() {
 
 	// Create window
 	sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Sorting");
+	window.setFramerateLimit(60);
 
 	std::vector<RectangleShape> bars = Utils::genArray(n, &window);
 	Utils::shuffleArray(bars);
