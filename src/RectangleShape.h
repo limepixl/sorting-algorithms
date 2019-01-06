@@ -1,8 +1,9 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-class RectangleShape : public sf::RectangleShape{
+class RectangleShape : public sf::RectangleShape
+{
 public:
-    using sf::RectangleShape::RectangleShape;
+	using sf::RectangleShape::RectangleShape;
 
-    int value;
+	int value;
 };

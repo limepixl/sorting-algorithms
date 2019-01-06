@@ -6,13 +6,15 @@
 #include "Algorithms.h"
 
 // All sorting algorithms stored in an enum
-enum SortType {
+enum SortType
+{
 	BUBBLE_SORT,
 	INSERTION_SORT,
 	SELECTION_SORT
 };
 
-int main() {
+int main()
+{
 	int n, windowWidth, windowHeight, delay, sortType;
 	bool sorted = false;
 
@@ -43,16 +45,21 @@ int main() {
 	Utils::shuffleArray(bars);
 
 	// Render loop
-	while (window.isOpen()) {
+	while(window.isOpen())
+	{
 		sf::Event e;
-		while (window.pollEvent(e)) {
-			if (e.type == sf::Event::Closed) {
+		while(window.pollEvent(e))
+		{
+			if(e.type == sf::Event::Closed)
+			{
 				window.close();
 			}
 		}
 
-		if (!sorted) {
-			switch (sortType) {
+		if(!sorted)
+		{
+			switch(sortType)
+			{
 			case BUBBLE_SORT:
 				BubbleSort::runSort(bars, &window, delay);
 				sorted = true;
@@ -72,10 +79,11 @@ int main() {
 				std::cout << "Invalid value for sort algorithm type entered!\n";
 				return 0;
 			}
-		}
-		else {
+		} else
+		{
 			window.clear(sf::Color(51, 51, 51, 255));
-			for (int i = 0; i < n; i++) {
+			for(int i = 0; i < n; i++)
+			{
 				window.draw(bars[i]);
 			}
 			window.display();

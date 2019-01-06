@@ -1,7 +1,9 @@
 #include "Utils.h"
 
-namespace Utils {
-	std::vector<RectangleShape> Utils::genArray(int n, sf::RenderWindow* window) {
+namespace Utils
+{
+	std::vector<RectangleShape> Utils::genArray(int n, sf::RenderWindow* window)
+	{
 		// Store the window's dimensions
 		sf::Vector2u windowSize = window->getSize();
 		int width = windowSize.x;
@@ -12,7 +14,8 @@ namespace Utils {
 		rects.reserve(n);
 
 		// Generate n number of rectangles
-		for(int i = 1; i <= n; i++) {
+		for(int i = 1; i <= n; i++)
+		{
 			RectangleShape rect(sf::Vector2f((float)width / n, (((float)height / n) * i)));
 
 			// Set their color, origin position (bottom left of rectangle)
@@ -31,11 +34,13 @@ namespace Utils {
 		return rects;
 	}
 
-	void Utils::shuffleArray(std::vector<RectangleShape>& arr) {
+	void Utils::shuffleArray(std::vector<RectangleShape>& arr)
+	{
 		// Size of the array
 		int sz = arr.size();
 
-		for(int i = 0; i < sz; i++) {
+		for(int i = 0; i < sz; i++)
+		{
 			int index = i + rand() % (sz - i);
 
 			sf::Vector2f firstPos = arr[i].getPosition();
